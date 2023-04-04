@@ -1,4 +1,3 @@
-const ipUrl = "http://ip-api.com/json";
 const weatherUrl =
     "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}";
 const WEATHER_API_KEY = "8dcfc9268c16525eda1dcd155bef5596";
@@ -44,7 +43,7 @@ async function weatherFetch(url) {
 
 async function ipFetch(url) {
     try {
-        const res = await fetch(url);
+        const res = await fetch("http://ip-api.com/json");
         const data = await res.json();
         weatherFetch(
             `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${WEATHER_API_KEY}&units=metric`
