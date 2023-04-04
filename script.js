@@ -3,7 +3,7 @@ const weatherWidget = document.querySelector(".weather-widget");
 
 async function ipFetch() {
     try {
-        const res = await fetch("http://ip-api.com/json");
+        const res = await fetch("https://ip-api.com/json");
         const data = await res.json();
         weatherFetch(
             `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${WEATHER_API_KEY}&units=metric`
