@@ -1,26 +1,30 @@
 const WEATHER_API_KEY = "8dcfc9268c16525eda1dcd155bef5596";
+const IP_API_KEY = "7bd8e6f5207a4dfca326e7a0a8d2ed86";
 const weatherWidget = document.querySelector(".weather-widget");
 
 async function ipFetch() {
     try {
-        const res = await fetch("http://ip-api.com/json");
+        const res = await fetch(
+            `https://api.ipgeolocation.io/ipgeo?apiKey=${IP_API_KEY}&fields=geo`
+        );
         const data = await res.json();
         weatherFetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${WEATHER_API_KEY}&units=metric`
+            `https://api.openweathermap.org/data/2.5/weather?lat=${data.latitude}&lon=${data.longitude}&appid=${WEATHER_API_KEY}&units=metric`,
+            data.city
         );
     } catch (error) {
         console.log(error);
     }
 }
 
-async function weatherFetch(url) {
+async function weatherFetch(url, city) {
     try {
         const res = await fetch(url);
         const data = await res.json();
 
         let html = `
 		<div class="weather-widget__main-info">
-			<h1 class="weather-widget__city-name">${data.name}</h1>
+			<h1 class="weather-widget__city-name">${city}</h1>
 			<p class="weather-widget__descr">${data.weather[0].description}</p>
 		</div>
 		<div class="weather-widget__value">${Math.round(data.main.temp)}°C</div>
@@ -44,8 +48,6 @@ async function weatherFetch(url) {
 		`;
 
         weatherWidget.innerHTML = html;
-
-        // console.log(data);
     } catch (error) {
         console.log(error);
     }
