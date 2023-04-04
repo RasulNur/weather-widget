@@ -1,5 +1,3 @@
-# weather-widget
-
 <h1>Виджет погоды</h1>
 
 <img src="./weather-widget.png" alt="Виджет погоды">
