@@ -6,4 +6,4 @@
 </a>
 
 <p>Для получения данных о погоде использовал: <a href="https://openweathermap.org/api">OpenWeather API<a/></p> 
-<p>Для получения данных местоположения использовал: <a href="https://ip-api.com/">IP Geolocation API<a/></p>
+<p>Для получения данных местоположения использовал: <a href="https://ipgeolocation.io/">ipgeolocation.io/<a/></p>
