@@ -4,18 +4,6 @@ const weatherUrl =
 const WEATHER_API_KEY = "8dcfc9268c16525eda1dcd155bef5596";
 const weatherWidget = document.querySelector(".weather-widget");
 
-async function ipFetch(url) {
-    try {
-        const res = await fetch(url);
-        const data = await res.json();
-        weatherFetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${WEATHER_API_KEY}&units=metric`
-        );
-    } catch (error) {
-        console.log(error);
-    }
-}
-
 async function weatherFetch(url) {
     try {
         const res = await fetch(url);
@@ -48,7 +36,19 @@ async function weatherFetch(url) {
 
         weatherWidget.innerHTML = html;
 
-        console.log(data);
+        // console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function ipFetch(url) {
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        weatherFetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${WEATHER_API_KEY}&units=metric`
+        );
     } catch (error) {
         console.log(error);
     }
