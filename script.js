@@ -22,21 +22,26 @@ async function weatherFetch(url) {
         const data = await res.json();
 
         let html = `
-		<div class="weather-widget__value">${Math.round(data.main.temp)}°C</div>
 		<div class="weather-widget__main-info">
 			<h1 class="weather-widget__city-name">${data.name}</h1>
 			<p class="weather-widget__descr">${data.weather[0].description}</p>
 		</div>
+		<div class="weather-widget__value">${Math.round(data.main.temp)}°C</div>
+		
 		<div class="weather-widget__additional-info">
 			<ul class="weather-widget__list">
-				<li class="weather-widget__list-item">Max temp: ${Math.round(
-                    data.main.temp_max
-                )}°C</li>
-				<li class="weather-widget__list-item">Min temp: ${Math.round(
-                    data.main.temp_min
-                )}°C</li>
-				<li class="weather-widget__list-item">Humidity: ${data.main.humidity}%</li>
-				<li class="weather-widget__list-item">Pressure: ${data.main.pressure}</li>
+				<li class="weather-widget__list-item">
+					<p>Max temp: ${Math.round(data.main.temp_max)}°C</p>
+				</li>
+				<li class="weather-widget__list-item">
+					<p>Min temp: ${Math.round(data.main.temp_min)}°C</p>
+				</li>
+				<li class="weather-widget__list-item">
+					<p>Humidity: ${data.main.humidity}%</p>
+				</li>
+				<li class="weather-widget__list-item">
+					<p>Pressure: ${data.main.pressure}</p>
+				</li>
 			</ul>
 		</div>
 		`;

@@ -127,27 +127,37 @@ table {
 /* Weather widget */
 
 .weather-widget {
-    margin: 0 auto;
-    background-color: #f0f0f0;
+    font-family: "Rubik", sans-serif;
+    margin: 50px auto 0;
+    background-color: #64a9f2;
     width: 530px;
     padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
+    color: white;
 }
 
 .weather-widget__value {
-    padding: 22px 15px;
-    background-color: #d9d9d9;
-    border-radius: 50%;
-    font-size: 20px;
+    font-size: 60px;
+}
+
+.weather-widget__main-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
 }
 
 .weather-widget__city-name {
-    margin-bottom: 15px;
     font-size: 28px;
     font-weight: 800;
 }
-.weather-widget__list li:not(:last-child) {
-    margin-bottom: 5px;
+
+.weather-widget__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
