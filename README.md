@@ -1,6 +1,9 @@
 <h1>Виджет погоды</h1>
 
-<img src="./weather-widget.png" alt="Виджет погоды">
+<p>Посмотреть можно <a href="https://rasulnur.github.io/weather-widget/">тут</a></p>
+<a href="https://rasulnur.github.io/weather-widget/">
+	<img src="./weather-widget.png" alt="Виджет погоды">
+</a>
 
 <p>Для получения данных о погоде использовал: <a href="https://openweathermap.org/api">OpenWeather API<a/></p> 
 <p>Для получения данных местоположения использовал: <a href="https://ip-api.com/">IP Geolocation API<a/></p>

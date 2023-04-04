@@ -135,6 +135,7 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 60px;
     border-radius: 5px;
     color: white;
 }
