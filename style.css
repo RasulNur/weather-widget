@@ -131,8 +131,7 @@ table {
 
 .weather-widget {
     font-family: "Rubik", sans-serif;
-    margin: 50px auto 0;
-    /* background-color: #64a9f2; */
+    margin: 0 auto;
     background: linear-gradient(
         0deg,
         rgba(177, 216, 255, 1) 0%,
