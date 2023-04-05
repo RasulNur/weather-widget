@@ -1,4 +1,7 @@
 /* Styles reset */
+* {
+    box-sizing: border-box;
+}
 html,
 body,
 div,
@@ -129,7 +132,12 @@ table {
 .weather-widget {
     font-family: "Rubik", sans-serif;
     margin: 50px auto 0;
-    background-color: #64a9f2;
+    /* background-color: #64a9f2; */
+    background: linear-gradient(
+        0deg,
+        rgba(177, 216, 255, 1) 0%,
+        rgba(100, 169, 242, 1) 100%
+    );
     width: 530px;
     padding: 30px;
     display: flex;
@@ -161,4 +169,21 @@ table {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+@media (max-width: 767px) {
+    .weather-widget {
+        flex-direction: column;
+        gap: 25px;
+        width: 280px;
+    }
+    .weather-widget__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding-top: 20px;
+    }
+    .weather-widget__list-item {
+        font-size: 14px;
+    }
 }
