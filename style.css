@@ -137,7 +137,7 @@ table {
         rgba(177, 216, 255, 1) 0%,
         rgba(100, 169, 242, 1) 100%
     );
-    width: 530px;
+    width: 540px;
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -174,7 +174,7 @@ table {
     .weather-widget {
         flex-direction: column;
         gap: 25px;
-        width: 280px;
+        width: 285px;
     }
     .weather-widget__list {
         display: grid;
