@@ -174,32 +174,35 @@ table {
     gap: 15px;
 }
 
-@media (max-width: 400px) {
-    /* .weather-widget {
-        flex-direction: column;
-        gap: 25px;
-        width: 285px;
-    } */
-    /* .weather-widget__list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        padding-top: 20px;
-    }
-    .weather-widget__list-item {
-        font-size: 14px;
-    } */
-}
-
-/* @media (max-height: 255px) {
+@media (max-width: 380px) {
     .weather-widget {
-        flex-direction: column;
-        gap: 10px;
-        width: 285px;
-        padding: 20px;
+        width: 220px;
+        padding: 10px;
+    }
+    .weather-widget__list {
+        display: none;
+    }
+    .weather-widget__value {
+        font-size: 30px;
+    }
+    .weather-widget__city-name {
+        font-size: 20px;
     }
     .weather-widget__top-wrapper {
         display: flex;
-        gap: 10px;
     }
-} */
+}
+
+@media (max-width: 230px) {
+    .weather-widget {
+        width: 120px;
+        padding: 10px;
+    }
+}
+
+@media (max-height: 170px) {
+    .weather-widget {
+        width: 120px;
+        padding: 10px;
+    }
+}
