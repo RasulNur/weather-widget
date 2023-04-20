@@ -205,10 +205,6 @@ table {
         width: 120px;
         padding: 10px;
     }
-    .weather-widget {
-        /* width: 220px; */
-        /* padding: 10px; */
-    }
     .weather-widget__list {
         display: none;
     }
