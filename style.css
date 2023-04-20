@@ -205,4 +205,20 @@ table {
         width: 120px;
         padding: 10px;
     }
+    .weather-widget {
+        /* width: 220px; */
+        /* padding: 10px; */
+    }
+    .weather-widget__list {
+        display: none;
+    }
+    .weather-widget__value {
+        font-size: 30px;
+    }
+    .weather-widget__city-name {
+        font-size: 20px;
+    }
+    .weather-widget__top-wrapper {
+        display: flex;
+    }
 }
