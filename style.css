@@ -175,12 +175,12 @@ table {
 }
 
 @media (max-width: 400px) {
-    .weather-widget {
+    /* .weather-widget {
         flex-direction: column;
         gap: 25px;
         width: 285px;
-    }
-    .weather-widget__list {
+    } */
+    /* .weather-widget__list {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -188,10 +188,10 @@ table {
     }
     .weather-widget__list-item {
         font-size: 14px;
-    }
+    } */
 }
 
-@media (max-height: 255px) {
+/* @media (max-height: 255px) {
     .weather-widget {
         flex-direction: column;
         gap: 10px;
@@ -202,4 +202,4 @@ table {
         display: flex;
         gap: 10px;
     }
-}
+} */
